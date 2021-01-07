@@ -11,8 +11,8 @@ declare(strict_types=1);
  * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 
-use Ergebnis\License;
 use Datana\PhpCsFixer;
+use Ergebnis\License;
 
 $license = License\Type\MIT::markdown(
     __DIR__.'/LICENSE.md',

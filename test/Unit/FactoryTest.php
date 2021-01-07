@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Datana\PhpCsFixer\Config\Test\Unit;
 
-use Ergebnis\Test\Util;
 use Datana\PhpCsFixer\Config;
+use Ergebnis\Test\Util;
 use PHPUnit\Framework;
 
 /**
