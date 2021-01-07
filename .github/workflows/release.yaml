@@ -21,7 +21,7 @@ jobs:
       - name: "Create release"
         uses: "actions/create-release@v1.1.4"
         env:
-          GITHUB_TOKEN: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.DATANA_BOT_TOKEN }}"
         with:
           draft: false
           prerelease: false

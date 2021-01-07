@@ -3,24 +3,24 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2020-2021 Gansel Rechtsanwälte
+ * Copyright (c) 2021 Datana GmbH
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
  *
- * @see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
+ * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 
-namespace Gansel\PhpCsFixer\Config\Test\Unit;
+namespace Datana\PhpCsFixer\Config\Test\Unit;
 
+use Datana\PhpCsFixer\Config;
 use Ergebnis\Test\Util;
-use Gansel\PhpCsFixer\Config;
 use PHPUnit\Framework;
 
 /**
  * @internal
  *
- * @covers \Gansel\PhpCsFixer\Config\Factory
+ * @covers \Datana\PhpCsFixer\Config\Factory
  */
 final class FactoryTest extends Framework\TestCase
 {

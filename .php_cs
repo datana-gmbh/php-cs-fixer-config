@@ -3,25 +3,25 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2020-2021 Gansel Rechtsanwälte
+ * Copyright (c) 2021 Datana GmbH
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
  *
- * @see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
+ * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 
+use Datana\PhpCsFixer;
 use Ergebnis\License;
-use Gansel\PhpCsFixer;
 
 $license = License\Type\MIT::markdown(
     __DIR__.'/LICENSE.md',
     License\Range::since(
-        License\Year::fromString('2020'),
+        License\Year::fromString('2021'),
         new \DateTimeZone('UTC')
     ),
-    License\Holder::fromString('Gansel Rechtsanwälte'),
-    License\Url::fromString('https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config')
+    License\Holder::fromString('Datana GmbH'),
+    License\Url::fromString('https://github.com/datana-gmbh/php-cs-fixer-config')
 );
 
 $license->save();

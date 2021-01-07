@@ -3,27 +3,27 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2020-2021 Gansel Rechtsanwälte
+ * Copyright (c) 2021 Datana GmbH
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
  *
- * @see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
+ * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 
-namespace Gansel\PhpCsFixer\Config\Test\Unit\RuleSet;
+namespace Datana\PhpCsFixer\Config\Test\Unit\RuleSet;
 
 use PhpCsFixer\Fixer;
 
 /**
  * @internal
  *
- * @covers \Gansel\PhpCsFixer\Config\RuleSet\AbstractRuleSet
- * @covers \Gansel\PhpCsFixer\Config\RuleSet\Php72
+ * @covers \Datana\PhpCsFixer\Config\RuleSet\AbstractRuleSet
+ * @covers \Datana\PhpCsFixer\Config\RuleSet\Php72
  */
 final class Php72Test extends AbstractRuleSetTestCase
 {
-    protected $name = 'gansel (PHP 7.2)';
+    protected $name = 'datana (PHP 7.2)';
 
     protected $rules = [
         'align_multiline_comment' => true,

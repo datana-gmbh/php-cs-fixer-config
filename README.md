@@ -1,14 +1,14 @@
 # php-cs-fixer-config
 
-[![Integrate](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/workflows/Integrate/badge.svg?branch=main)](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/actions)
-[![Prune](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/workflows/Prune/badge.svg?branch=main)](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/actions)
-[![Release](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/workflows/Release/badge.svg?branch=main)](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/actions)
-[![Renew](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/workflows/Renew/badge.svg?branch=main)](https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/actions)
+[![Integrate](https://github.com/datana-gmbh/php-cs-fixer-config/workflows/Integrate/badge.svg?branch=main)](https://github.com/datana-gmbh/php-cs-fixer-config/actions)
+[![Prune](https://github.com/datana-gmbh/php-cs-fixer-config/workflows/Prune/badge.svg?branch=main)](https://github.com/datana-gmbh/php-cs-fixer-config/actions)
+[![Release](https://github.com/datana-gmbh/php-cs-fixer-config/workflows/Release/badge.svg?branch=main)](https://github.com/datana-gmbh/php-cs-fixer-config/actions)
+[![Renew](https://github.com/datana-gmbh/php-cs-fixer-config/workflows/Renew/badge.svg?branch=main)](https://github.com/datana-gmbh/php-cs-fixer-config/actions)
 
-[![Code Coverage](https://codecov.io/gh/gansel-rechtsanwaelte/php-cs-fixer-config/branch/main/graph/badge.svg)](https://codecov.io/gh/gansel-rechtsanwaelte/php-cs-fixer-config)
+[![Code Coverage](https://codecov.io/gh/datana-gmbh/php-cs-fixer-config/branch/main/graph/badge.svg)](https://codecov.io/gh/datana-gmbh/php-cs-fixer-config)
 
-[![Latest Stable Version](https://poser.pugx.org/gansel-rechtsanwaelte/php-cs-fixer-config/v/stable)](https://packagist.org/packages/gansel-rechtsanwaelte/php-cs-fixer-config)
-[![Total Downloads](https://poser.pugx.org/gansel-rechtsanwaelte/php-cs-fixer-config/downloads)](https://packagist.org/packages/gansel-rechtsanwaelte/php-cs-fixer-config)
+[![Latest Stable Version](https://poser.pugx.org/datana-gmbh/php-cs-fixer-config/v/stable)](https://packagist.org/packages/datana-gmbh/php-cs-fixer-config)
+[![Total Downloads](https://poser.pugx.org/datana-gmbh/php-cs-fixer-config/downloads)](https://packagist.org/packages/datana-gmbh/php-cs-fixer-config)
 
 Provides a configuration factory and multiple rule sets for [`friendsofphp/php-cs-fixer`](http://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
@@ -17,7 +17,7 @@ Provides a configuration factory and multiple rule sets for [`friendsofphp/php-c
 Run
 
 ```sh
-$ composer require --dev gansel/php-cs-fixer-config
+$ composer require --dev datana-gmbh/php-cs-fixer-config
 ```
 
 ## Usage
@@ -26,16 +26,16 @@ $ composer require --dev gansel/php-cs-fixer-config
 
 Pick one of the rule sets:
 
-* [`Gansel\PhpCsFixer\RuleSet\Php72`](src/RuleSet/Php72.php)
-* [`Gansel\PhpCsFixer\RuleSet\Php73`](src/RuleSet/Php73.php)
-* [`Gansel\PhpCsFixer\RuleSet\Php74`](src/RuleSet/Php74.php)
+* [`Datana\PhpCsFixer\RuleSet\Php72`](src/RuleSet/Php72.php)
+* [`Datana\PhpCsFixer\RuleSet\Php73`](src/RuleSet/Php73.php)
+* [`Datana\PhpCsFixer\RuleSet\Php74`](src/RuleSet/Php74.php)
 
 Create a configuration file `.php_cs` in the root of your project:
 
 ```php
 <?php
 
-use Gansel\PhpCsFixer\Config;
+use Datana\PhpCsFixer\Config;
 
 $config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
 
@@ -63,15 +63,15 @@ All configuration examples use the caching feature, and if you want to use it as
 ```diff
  <?php
 
- use Gansel\PhpCsFixer\Config;
+ use Datana\PhpCsFixer\Config;
 
 +$header = <<<EOF
-+Copyright (c) 2020 Gansel Rechtsanwälte
++Copyright (c) 2021 Datana GmbH
 +
 +For the full copyright and license information, please view
 +the LICENSE file that was distributed with this source code.
 +
-+@see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
++@see https://github.com/datana-gmbh/php-cs-fixer-config
 +EOF;
 
 -$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
@@ -90,12 +90,12 @@ file headers will be added to PHP files, for example:
 <?php
 
 /**
- * Copyright (c) 2020 Gansel Rechtsanwälte
+ * Copyright (c) 2021 Datana GmbH
  *
  * For the full copyright and license information, please view
  * the LICENSE file that was distributed with this source code.
  *
- * @see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
+ * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 ```
 
@@ -106,7 +106,7 @@ file headers will be added to PHP files, for example:
 ```diff
  <?php
 
- use Gansel\PhpCsFixer\Config;
+ use Datana\PhpCsFixer\Config;
 
 -$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74());
 +$config = Config\Factory::fromRuleSet(new Config\RuleSet\Php74(), [
@@ -154,7 +154,7 @@ If you like [`composer` scripts](https://getcomposer.org/doc/articles/scripts.md
      "php": "^7.4",
    },
    "require-dev": {
-     "gansel/php-cs-fixer-config": "~1.0.0"
+     "datana-gmbh/php-cs-fixer-config": "~1.0.0"
 +  },
 +  "scripts": {
 +    "coding-standards": [

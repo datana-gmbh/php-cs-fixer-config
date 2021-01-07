@@ -1,13 +1,17 @@
 {
-  "name": "gansel-rechtsanwaelte/php-cs-fixer-config",
+  "name": "datana-gmbh/php-cs-fixer-config",
   "type": "library",
   "description": "Provides a configuration factory and multiple rule sets for friendsofphp/php-cs-fixer.",
-  "homepage": "https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config",
+  "homepage": "https://github.com/datana-gmbh/php-cs-fixer-config",
   "license": "MIT",
   "authors": [
     {
       "name": "Andreas Möller",
       "email": "am@localheinz.com"
+    },
+    {
+      "name": "Oskar Stark",
+      "email": "oskarstark@googlemail.com"
     }
   ],
   "require": {
@@ -43,16 +47,16 @@
   },
   "autoload": {
     "psr-4": {
-      "Gansel\\PhpCsFixer\\Config\\": "src"
+      "Datana\\PhpCsFixer\\Config\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Gansel\\PhpCsFixer\\Config\\Test\\": "test"
+      "Datana\\PhpCsFixer\\Config\\Test\\": "test"
     }
   },
   "support": {
-    "issues": "https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config/issues",
-    "source": "https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config"
+    "issues": "https://github.com/datana-gmbh/php-cs-fixer-config/issues",
+    "source": "https://github.com/datana-gmbh/php-cs-fixer-config"
   }
 }

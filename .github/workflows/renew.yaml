@@ -7,8 +7,8 @@ on: # yamllint disable-line rule:truthy
     - cron: "1 0 1 1 *"
 
 env:
-  GANSEL_BOT_EMAIL: "it-legalforce@gansel-rechtsanwaelte.de"
-  GANSEL_BOT_NAME: "gansel-bot"
+  DATANA_BOT_EMAIL: "bot@datana.rocks"
+  DATANA_BOT_NAME: "datana-bot"
   PHP_EXTENSIONS: "mbstring"
 
 jobs:
@@ -70,7 +70,7 @@ jobs:
       - name: "Open pull request updating license year"
         uses: "gr2m/create-or-update-pull-request-action@v1.3.3"
         with:
-          author: "${{ env.GANSEL_BOT_NAME }} <${{ env.GANSEL_BOT_EMAIL }}>"
+          author: "${{ env.DATANA_BOT_NAME }} <${{ env.DATANA_BOT_EMAIL }}>"
           branch: "feature/license-year"
           body: |
             This PR
@@ -80,4 +80,4 @@ jobs:
           path: "."
           title: "Enhancement: Update license year"
         env:
-          GITHUB_TOKEN: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          GITHUB_TOKEN: "${{ secrets.DATANA_BOT_TOKEN }}"

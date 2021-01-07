@@ -3,17 +3,17 @@
 declare(strict_types=1);
 
 /**
- * Copyright (c) 2020-2021 Gansel Rechtsanwälte
+ * Copyright (c) 2021 Datana GmbH
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.
  *
- * @see https://github.com/gansel-rechtsanwaelte/php-cs-fixer-config
+ * @see https://github.com/datana-gmbh/php-cs-fixer-config
  */
 
-namespace Gansel\PhpCsFixer\Config\RuleSet;
+namespace Datana\PhpCsFixer\Config\RuleSet;
 
-use Gansel\PhpCsFixer\Config\RuleSet;
+use Datana\PhpCsFixer\Config\RuleSet;
 
 /**
  * @internal

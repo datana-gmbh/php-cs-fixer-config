@@ -9,7 +9,7 @@ on: # yamllint disable-line rule:truthy
       - "main"
 
 env:
-  GANSEL_BOT_NAME: "gansel-bot"
+  DATANA_BOT_NAME: "datana-bot"
   MIN_COVERED_MSI: 100
   MIN_MSI: 100
   PHP_EXTENSIONS: "mbstring"
@@ -344,23 +344,23 @@ jobs:
       ) && (
         (github.actor == 'dependabot[bot]' && startsWith(github.event.pull_request.title, 'composer(deps-dev)')) ||
         (github.actor == 'dependabot[bot]' && startsWith(github.event.pull_request.title, 'github-actions(deps)')) ||
-        (github.actor == 'gansel-bot' && github.event.pull_request.title == 'Enhancement: Update license year') ||
+        (github.actor == 'datana-bot' && github.event.pull_request.title == 'Enhancement: Update license year') ||
         (github.actor == 'igst' && contains(github.event.pull_request.labels.*.name, 'merge')) ||
         (github.actor == 'localheinz' && contains(github.event.pull_request.labels.*.name, 'merge')) ||
         (github.actor == 'OskarStark' && contains(github.event.pull_request.labels.*.name, 'merge'))
       )
 
     steps:
-      - name: "Request review from @${{ env.GANSEL_BOT_NAME }}"
+      - name: "Request review from @${{ env.DATANA_BOT_NAME }}"
         uses: "actions/github-script@v3.0.0"
         with:
-          github-token: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
             const pullRequest = context.payload.pull_request
             const repository = context.repo
 
             const reviewers = [
-              "${{ env.GANSEL_BOT_NAME }}",
+              "${{ env.DATANA_BOT_NAME }}",
             ]
 
             await github.pulls.requestReviewers({
@@ -370,16 +370,16 @@ jobs:
               reviewers: reviewers,
             })
 
-      - name: "Assign @${{ env.GANSEL_BOT_NAME }}"
+      - name: "Assign @${{ env.DATANA_BOT_NAME }}"
         uses: "actions/github-script@v3.0.0"
         with:
-          github-token: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
             const pullRequest = context.payload.pull_request
             const repository = context.repo
 
             const assignees = [
-              "${{ env.GANSEL_BOT_NAME }}",
+              "${{ env.DATANA_BOT_NAME }}",
             ]
 
             await github.issues.addAssignees({
@@ -391,9 +391,9 @@ jobs:
 
       - name: "Approve pull request"
         uses: "actions/github-script@v3.0.0"
-        if: "github.actor != '${{ env.GANSEL_BOT_NAME }}'"
+        if: "github.actor != '${{ env.DATANA_BOT_NAME }}'"
         with:
-          github-token: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
             const pullRequest = context.payload.pull_request
             const repository = context.repo
@@ -408,7 +408,7 @@ jobs:
       - name: "Merge pull request"
         uses: "actions/github-script@v3.0.0"
         with:
-          github-token: "${{ secrets.GANSEL_BOT_TOKEN }}"
+          github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
             const pullRequest = context.payload.pull_request
             const repository = context.repo

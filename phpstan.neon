@@ -6,8 +6,8 @@ parameters:
 
 	ergebnis:
 		classesAllowedToBeExtended:
-			- Gansel\PhpCsFixer\Config\RuleSet\AbstractRuleSet
-			- Gansel\PhpCsFixer\Config\Test\Unit\RuleSet\AbstractRuleSetTestCase
+			- Datana\PhpCsFixer\Config\RuleSet\AbstractRuleSet
+			- Datana\PhpCsFixer\Config\Test\Unit\RuleSet\AbstractRuleSetTestCase
 
 	inferPrivatePropertyTypeFromConstructor: true
 
