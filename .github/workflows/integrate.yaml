@@ -352,7 +352,7 @@ jobs:
 
     steps:
       - name: "Request review from @${{ env.DATANA_BOT_NAME }}"
-        uses: "actions/github-script@v3.0.0"
+        uses: "actions/github-script@v3.1"
         with:
           github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
@@ -371,7 +371,7 @@ jobs:
             })
 
       - name: "Assign @${{ env.DATANA_BOT_NAME }}"
-        uses: "actions/github-script@v3.0.0"
+        uses: "actions/github-script@v3.1"
         with:
           github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
@@ -390,7 +390,7 @@ jobs:
             })
 
       - name: "Approve pull request"
-        uses: "actions/github-script@v3.0.0"
+        uses: "actions/github-script@v3.1"
         if: "github.actor != '${{ env.DATANA_BOT_NAME }}'"
         with:
           github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
@@ -406,7 +406,7 @@ jobs:
             })
 
       - name: "Merge pull request"
-        uses: "actions/github-script@v3.0.0"
+        uses: "actions/github-script@v3.1"
         with:
           github-token: "${{ secrets.DATANA_BOT_TOKEN }}"
           script: |
