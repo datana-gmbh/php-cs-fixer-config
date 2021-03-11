@@ -3,7 +3,7 @@
 name: "Triage"
 
 on: # yamllint disable-line rule:truthy
-  pull_request_target:
+  pull_request:
     types:
       - "opened"
 
@@ -12,6 +12,16 @@ jobs:
     name: "Label"
 
     runs-on: "ubuntu-latest"
+
+    if: >
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.draft == false && (
+        github.event.action == 'opened' ||
+        github.event.action == 'reopened' ||
+        github.event.action == 'synchronize'
+      ) && (
+        github.actor != 'dependabot[bot]'
+      )
 
     steps:
       - name: "Add labels based on branch name"
