@@ -33,7 +33,7 @@ final class Php74Test extends AbstractRuleSetTestCase
             'syntax' => 'short',
         ],
         'backtick_to_shell_exec' => true,
-        'binary_operator_spaces' => true,
+        'binary_operator_spaces' => ['operators' => ['|' => 'no_space']],
         'blank_line_after_namespace' => true,
         'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => [
