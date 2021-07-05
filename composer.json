@@ -29,7 +29,7 @@
     "phpstan/phpstan": "~0.12.91",
     "phpstan/phpstan-deprecation-rules": "~0.12.6",
     "phpstan/phpstan-phpunit": "~0.12.20",
-    "phpstan/phpstan-strict-rules": "~0.12.7",
+    "phpstan/phpstan-strict-rules": "~0.12.10",
     "phpunit/phpunit": "^8.5.17"
   },
   "config": {
