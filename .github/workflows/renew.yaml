@@ -68,7 +68,7 @@ jobs:
         run: "vendor/bin/php-cs-fixer fix --config=.php_cs --diff --diff-format=udiff --dry-run --verbose"
 
       - name: "Open pull request updating license year"
-        uses: "gr2m/create-or-update-pull-request-action@v1.4.1"
+        uses: "gr2m/create-or-update-pull-request-action@v1.5.1"
         with:
           author: "${{ env.DATANA_BOT_NAME }} <${{ env.DATANA_BOT_EMAIL }}>"
           branch: "feature/license-year"
