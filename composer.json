@@ -1,9 +1,8 @@
 {
   "name": "datana-gmbh/php-cs-fixer-config",
-  "type": "library",
   "description": "Provides a configuration factory and multiple rule sets for friendsofphp/php-cs-fixer.",
-  "homepage": "https://github.com/datana-gmbh/php-cs-fixer-config",
   "license": "MIT",
+  "type": "library",
   "authors": [
     {
       "name": "Andreas Möller",
@@ -14,13 +13,18 @@
       "email": "oskarstark@googlemail.com"
     }
   ],
+  "homepage": "https://github.com/datana-gmbh/php-cs-fixer-config",
+  "support": {
+    "issues": "https://github.com/datana-gmbh/php-cs-fixer-config/issues",
+    "source": "https://github.com/datana-gmbh/php-cs-fixer-config"
+  },
   "require": {
     "php": "^7.2 || ^8.0",
     "friendsofphp/php-cs-fixer": "~2.19.3"
   },
   "require-dev": {
     "composer/package-versions-deprecated": "1.11.99.4",
-    "ergebnis/composer-normalize": "^2.17.0",
+    "ergebnis/composer-normalize": "^2.18.0",
     "ergebnis/license": "^1.1.0",
     "ergebnis/phpstan-rules": "~0.15.3",
     "ergebnis/test-util": "^1.5.0",
@@ -31,6 +35,16 @@
     "phpstan/phpstan-phpunit": "~0.12.22",
     "phpstan/phpstan-strict-rules": "~0.12.11",
     "phpunit/phpunit": "^8.5.21"
+  },
+  "autoload": {
+    "psr-4": {
+      "Datana\\PhpCsFixer\\Config\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Datana\\PhpCsFixer\\Config\\Test\\": "test"
+    }
   },
   "config": {
     "platform": {
@@ -44,19 +58,5 @@
       "indent-size": 2,
       "indent-style": "space"
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "Datana\\PhpCsFixer\\Config\\": "src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Datana\\PhpCsFixer\\Config\\Test\\": "test"
-    }
-  },
-  "support": {
-    "issues": "https://github.com/datana-gmbh/php-cs-fixer-config/issues",
-    "source": "https://github.com/datana-gmbh/php-cs-fixer-config"
   }
 }
