@@ -51,7 +51,11 @@
       "php": "7.2.33"
     },
     "preferred-install": "dist",
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "ergebnis/composer-normalize": true,
+      "phpstan/extension-installer": true
+    }
   },
   "extra": {
     "composer-normalize": {
